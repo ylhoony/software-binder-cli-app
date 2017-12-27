@@ -1,6 +1,14 @@
-require "software_binder/version"
+require 'open-uri'
+require 'nokogiri'
+require 'pry'
 
-module SoftwareBinder
+require "software_binder/version"
+require "software_binder/cli"
+require "software_binder/scraper"
+require "software_binder/category"
+require "software_binder/software"
+
+
+# module SoftwareBinder
   # Your code goes here...
-  puts "hello"
-end
+# end
