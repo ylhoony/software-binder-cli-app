@@ -1,0 +1,3 @@
+class SoftwareBinder::Scraper
+
+end

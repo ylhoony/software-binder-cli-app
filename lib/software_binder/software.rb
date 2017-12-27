@@ -1,0 +1,3 @@
+class SoftwareBinder::Software
+
+end

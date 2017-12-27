@@ -1,7 +1,7 @@
 class SoftwareBinder::CLI
 
   def call
-    puts "welcome"
+    puts "Welcome to Software Binder!"
   end
 
 end
