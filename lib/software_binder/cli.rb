@@ -11,8 +11,6 @@ class SoftwareBinder::CLI
   end
 
   def load_categories
-    @@last_category_search.clear
-    SoftwareBinder::Category.reset
     SoftwareBinder::Scraper.scrape_categories
   end
 
@@ -63,7 +61,7 @@ class SoftwareBinder::CLI
         puts "#{i}. #{list.name}"
         puts "Review Rating: #{list.overall_rating}/5.0 from #{list.reviews} reviews"
         puts "Description: #{list.description}"
-        puts 
+        puts
       end
     end
   end
