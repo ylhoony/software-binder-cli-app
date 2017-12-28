@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Hoon Lee"]
   spec.email         = ["yl.hoony@gmail.com"]
 
-  spec.summary       = %q{CLI Program to search software from Capterra}
-  spec.description   = %q{CLI Program to search software from Capterra}
+  spec.summary       = %q{CLI Program to check software cateogy and lists from Capterra}
+  spec.description   = %q{With Software Binder, you can get the software list by category from Capterra.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
