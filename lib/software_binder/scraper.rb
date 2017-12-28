@@ -17,11 +17,10 @@ class SoftwareBinder::Scraper
     doc.css(".listing").each do |element|
       software = SoftwareBinder::Software.new(category)
       software.name = element.css(".listing-name a").text.strip
-      software.overall_rating = element.css(".reviews").attribute("data-rating") ? element.css(".reviews").attribute("data-rating").value.split("/")[0] : "0.0"
-      software.reviews = element.css(".reviews").attribute("data-rating") ? element.css(".reviews").attribute("data-rating").value.split(" - ")[1] : "0.0"
+      software.overall_rating = element.css(".reviews").attr("data-rating").value.split("/")[0] || "0.0"
+      software.reviews = element.css(".reviews").attr("data-rating").value.split(" - ")[1] || "0.0"
       software.description = element.css(".listing-description").text.strip.gsub(/\s{2,}/,' ').gsub(" Learn more about #{software.name}",'')
-      software.page_slug = element.css(".listing-description a").attribute("href").value
-      # binding.pry
+      software.page_slug = element.css(".listing-description a").attr("href").value
     end
   end
 
