@@ -6,6 +6,8 @@ class SoftwareBinder::Software
 
   def initialize(category)
     @category = category
+    @overall_rating = "0.0"
+    @reviews = "0.0"
     self.save
   end
 

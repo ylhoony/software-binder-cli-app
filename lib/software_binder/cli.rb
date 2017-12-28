@@ -63,12 +63,24 @@ class SoftwareBinder::CLI
         puts "#{i}. #{list.name}"
         puts "Review Rating: #{list.overall_rating}/5.0 from #{list.reviews} reviews"
         puts "Description: #{list.description}"
+        puts 
       end
     end
   end
 
   def reset?
-
+    puts "Would you like to check other software? (Y/N)"
+    answer = gets.strip
+    case answer.downcase
+    when "y"
+      self.call
+    when "n"
+      exit
+    else
+      puts "I do not understand your answer"
+      puts "Please answer with Y or N"
+      self.reset?
+    end
   end
 
 end
