@@ -11,6 +11,9 @@ class SoftwareBinder::CLI
   end
 
   def load_categories
+    self.class.last_category_search.clear
+    SoftwareBinder::Software.reset
+    SoftwareBinder::Category.reset
     SoftwareBinder::Scraper.scrape_categories
   end
 
