@@ -6,7 +6,7 @@ class SoftwareBinder::CLI
     puts "Welcome to Software Binder!"
     load_categories
     list_categories
-    list_software
+    list_softwares
     reset?
   end
 
@@ -50,8 +50,15 @@ class SoftwareBinder::CLI
     end
   end
 
-  def list_software
-
+  def list_softwares
+    puts "Please enter the category index number, or type 'exit' to quit"
+    input = gets.strip
+    if !input.to_i.between?(1, self.class.last_category_search.size)
+      puts "It is not valid input."
+      self.list_software
+    else
+      SoftwareBinder::Scraper.scrape_softwares(self.class.last_category_search[input.to_i - 1])
+    end
   end
 
   def reset?

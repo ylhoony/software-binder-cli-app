@@ -10,8 +10,8 @@ class SoftwareBinder::Scraper
     end
   end
 
-  def self.scrape_softwares
-
+  def self.scrape_softwares(category)
+    category
   end
 
 end
