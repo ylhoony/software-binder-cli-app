@@ -17,7 +17,7 @@ class SoftwareBinder::CLI
   end
 
   def self.last_category_search
-    @@last_category_search.freeze
+    @@last_category_search
   end
 
   def list_categories
@@ -55,9 +55,10 @@ class SoftwareBinder::CLI
     input = gets.strip
     if !input.to_i.between?(1, self.class.last_category_search.size)
       puts "It is not valid input."
-      self.list_software
+      self.list_softwares
     else
-      SoftwareBinder::Scraper.scrape_softwares(self.class.last_category_search[input.to_i - 1])
+      selected_category = self.class.last_category_search[input.to_i - 1]
+      SoftwareBinder::Scraper.scrape_softwares(selected_category)
     end
   end
 
