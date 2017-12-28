@@ -16,7 +16,7 @@ class SoftwareBinder::CLI
     puts "or enter 'exit' to quit."
     input = gets.strip
     exit if input == 'exit'
-
+    
 
   end
 
