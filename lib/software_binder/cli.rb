@@ -11,6 +11,8 @@ class SoftwareBinder::CLI
   end
 
   def load_categories
+    @@last_category_search.clear
+    SoftwareBinder::Category.reset
     SoftwareBinder::Scraper.scrape_categories
   end
 
@@ -24,9 +26,19 @@ class SoftwareBinder::CLI
     input = gets.strip
     exit if input == 'exit'
     if input.length == 1
+      find_by_alphabet = SoftwareBinder::Category.find_by_alphabet(input)
+      if find_by_alphabet.size > 0
+        find_by_alphabet.each.with_index(1) do |category, i|
+          @@last_category_search << category
+          puts "#{i}. #{category.name}"
+        end
+      else
+        puts "There is no result for your search."
+        self.list_categories
+      end
+    # else
 
     end
-
   end
 
   def list_software
