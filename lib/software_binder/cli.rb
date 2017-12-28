@@ -59,6 +59,11 @@ class SoftwareBinder::CLI
     else
       selected_category = self.class.last_category_search[input.to_i - 1]
       SoftwareBinder::Scraper.scrape_softwares(selected_category)
+      SoftwareBinder::Software.all.each.with_index(1) do |list, i|
+        puts "#{i}. #{list.name}"
+        puts "Review Rating: #{list.overall_rating}/5.0 from #{list.reviews} reviews"
+        puts "Description: #{list.description}"
+      end
     end
   end
 
