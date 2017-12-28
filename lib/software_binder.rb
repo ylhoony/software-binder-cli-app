@@ -1,6 +1,7 @@
 require 'open-uri'
 require 'nokogiri'
 require 'pry'
+require 'require_all'
 
 require "software_binder/version"
 require "software_binder/cli"
