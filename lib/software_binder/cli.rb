@@ -7,6 +7,7 @@ class SoftwareBinder::CLI
     load_categories
     list_categories
     list_software
+    reset?
   end
 
   def load_categories
@@ -23,12 +24,16 @@ class SoftwareBinder::CLI
     input = gets.strip
     exit if input == 'exit'
     if input.length == 1
-      
+
     end
 
   end
 
   def list_software
+
+  end
+
+  def reset?
 
   end
 
