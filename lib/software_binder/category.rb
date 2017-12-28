@@ -25,5 +25,15 @@ class SoftwareBinder::Category
     end
   end
 
-
+  def self.find_by_alphabet(alphabet)
+    if alphabet === "#"
+      self.all.select do |category|
+        category.name.chr.to_i.between?(1,9) == true
+      end
+    else
+      self.all.select do |category|
+        category.name.downcase.chr == alphabet.downcase
+      end
+    end
+  end
 end
