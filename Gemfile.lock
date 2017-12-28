@@ -3,6 +3,7 @@ PATH
   specs:
     software_binder (0.1.0)
       nokogiri (~> 1.8)
+      require_all
 
 GEM
   remote: https://rubygems.org/
@@ -17,6 +18,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     rake (10.5.0)
+    require_all (1.4.0)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)

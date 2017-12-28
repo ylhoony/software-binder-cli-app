@@ -11,4 +11,10 @@ require "software_binder"
 # Pry.start
 
 require "irb"
+
+def reload!
+  load_all './lib'
+  puts "Reloaded!"
+end
+
 IRB.start(__FILE__)
