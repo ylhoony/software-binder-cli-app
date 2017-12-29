@@ -17,4 +17,8 @@ class SoftwareBinder::Software
     @@all
   end
 
+  def self.reset
+    @@all.clear
+  end
+
 end
