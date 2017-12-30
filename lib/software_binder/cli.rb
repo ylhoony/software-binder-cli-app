@@ -54,6 +54,7 @@ class SoftwareBinder::CLI
   def list_softwares
     puts "Please enter the category index number, or type 'exit' to quit"
     input = gets.strip
+    exit if input == 'exit'
     if !input.to_i.between?(1, self.class.last_category_search.size)
       puts "It is not valid input."
       self.list_softwares
