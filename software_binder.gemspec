@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{CLI Program to check software cateogy and lists from Capterra}
   spec.description   = %q{With Software Binder, you can get the software list by category from Capterra.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/ylhoony/software-binder-cli-app"
   spec.license       = "MIT"
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
 
