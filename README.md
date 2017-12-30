@@ -7,21 +7,15 @@ Software Binder is Ruby CLI program that you can search software categories and 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'software_binder'
+$ gem install software_binder
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install software_binder
 
 ## Usage
 
+Type this line to start the program:
+
 ```ruby
-gem 'software_binder'
+$ software_binder
 ```
 
 ## Development
