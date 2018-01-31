@@ -37,6 +37,12 @@ class SoftwareBinder::CLI
         puts "There is no result for your search."
         self.list_categories
       end
+    elsif input.to_i == 100
+      result = SoftwareBinder::Category.find_by_keyword("")[0 .. 99]
+      result.each.with_index(1) do |category, i|
+        @@last_category_search << category
+        puts "#{i}. #{category.name}"
+      end
     else
       find_by_keyword = SoftwareBinder::Category.find_by_keyword(input)
       if find_by_keyword.size > 0

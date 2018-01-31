@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Hoon Lee"]
   spec.email         = ["yl.hoony@gmail.com"]
 
-  spec.summary       = %q{CLI Program to check software cateogy and lists from Capterra}
-  spec.description   = %q{With Software Binder, you can get the software list by category from Capterra.}
+  spec.summary       = %q{CLI Program to check software cateogy and lists}
+  spec.description   = %q{With Software Binder, you can get the software list by category.}
   spec.homepage      = "https://github.com/ylhoony/software-binder-cli-app"
   spec.license       = "MIT"
   spec.metadata["allowed_push_host"] = "https://rubygems.org"
